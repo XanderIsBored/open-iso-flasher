@@ -14,6 +14,7 @@ namespace tesett
 {
     public partial class Form1 : Form
     {
+
         static bool IsIsoFile(string filePath)
         {
             return Path.GetExtension(filePath).Equals(".iso", StringComparison.OrdinalIgnoreCase);
@@ -25,7 +26,7 @@ namespace tesett
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -77,6 +78,16 @@ namespace tesett
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }

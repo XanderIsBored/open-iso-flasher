@@ -29,6 +29,7 @@ namespace tesett
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -40,18 +41,18 @@ namespace tesett
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(252, 46);
+            this.richTextBox1.Location = new System.Drawing.Point(10, 20);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(293, 32);
+            this.richTextBox1.Size = new System.Drawing.Size(265, 30);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(329, 93);
+            this.button1.Location = new System.Drawing.Point(40, 70);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 36);
+            this.button1.Size = new System.Drawing.Size(200, 30);
             this.button1.TabIndex = 1;
             this.button1.Text = "Select File";
             this.button1.UseVisualStyleBackColor = true;
@@ -60,12 +61,13 @@ namespace tesett
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "Open your iso";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(329, 202);
+            this.button2.Location = new System.Drawing.Point(40, 175);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 36);
+            this.button2.Size = new System.Drawing.Size(200, 30);
             this.button2.TabIndex = 2;
             this.button2.Text = "Select Drive";
             this.button2.UseVisualStyleBackColor = true;
@@ -73,35 +75,41 @@ namespace tesett
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(252, 146);
+            this.richTextBox2.Location = new System.Drawing.Point(10, 125);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(293, 32);
+            this.richTextBox2.Size = new System.Drawing.Size(265, 30);
             this.richTextBox2.TabIndex = 3;
             this.richTextBox2.Text = "";
             this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(329, 257);
+            this.button3.Location = new System.Drawing.Point(40, 255);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 36);
+            this.button3.Size = new System.Drawing.Size(200, 30);
             this.button3.TabIndex = 4;
             this.button3.Text = "Flash!";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // folderBrowserDialog1
+            // 
+            this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(284, 361);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "OpenFlasher";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
